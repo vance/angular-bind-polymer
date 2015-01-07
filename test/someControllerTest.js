@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('App').controller('inputControllerWorkbench', function(
+    angular.module('App').controller('someController', function(
         BaseController,UserModel,$rootScope, $scope) {
         var controller = {
 
