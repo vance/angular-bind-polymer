@@ -35,5 +35,14 @@
       </p>
       <x-double bind-polymer in="{{in}}" out="{{doubled}}"></x-double>
     </div>
+    
+    <div style="padding:30px; border: 1px dotted #F2F9F9;">
+        <br/><br/>
+        <h2>Partial to test Complex Object Input Binding</h2>
+        <pre ng-bind="someControl.testModel.name"></pre>
+        <hr/>
+        <some-input showDebug="true" boundModel="{{someControl.testModel.name}}" bind-polymer></some-input>
+    </div>
+    
   </body>
 </html>
