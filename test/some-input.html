@@ -1,0 +1,31 @@
+<polymer-element name="some-input" attributes="boundModel">
+ 
+    <template>
+        <div>
+            <input id="inputField" type="text" value="{{boundModel.name}}" on-click="{{setFocus}}">
+            output: {{boundModel.name}}
+        </div>
+    </template>
+    <script type="application/javascript">
+    Polymer("some-input", {
+        publish:{
+            boundModel: { value: {
+                name: 'default'
+            }, reflect:true}
+        },
+        created: function(){
+        },
+        ready: function() {
+            Debug.log('I, POLYMER, ARE READY');
+        },
+        setFocus: function()
+        {
+            Debug.log( 'set Focus');
+            this.$.inputField.focus();
+            // this.$.inputField.value = 'oops';
+            this.boundModel = 'ooopsies';
+        }
+    });
+    </script>
+ 
+</polymer-element>
